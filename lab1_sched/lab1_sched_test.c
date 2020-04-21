@@ -39,18 +39,24 @@
 int main(int argc, char* argv[]) {
 	//process id's 
 	int processes[] = {1, 2, 3, 4, 5}; 
+	int processes2[] = {6, 7, 8, 9, 10}; 
 	int n = sizeof processes / sizeof processes[0]; 
 	
 	//Burst time of all processes 
 	int burst_time[] = {5, 3, 8, 6, 2}; 
+	int burst_time2[] = {2, 2, 5, 9, 4}; 
     
     // Arrival time of all processes 
     int arrival_time[] = {0, 1, 2, 3, 4}; 
+    int arrival_time2[] = {0, 1, 4, 9, 3}; 
 	
     // FCFS scheduling
 	printf("FCFS Scheduling>>>>>>>>>>>>>>>>>>>>>");
 	printf("\n");
 	FCFS_findavgTime(processes, n, burst_time, arrival_time);
+	printf("FCFS Scheduling secondary>>>>>>>>>>>>>>>>>>>>>");
+	printf("\n");
+	FCFS_findavgTime(processes2, n, burst_time2, arrival_time2);
 
 	Task task[TASK_NUM] = {
 		{1, 5, 0, 0, 0, -1, -1, 0},
