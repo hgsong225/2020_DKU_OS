@@ -49,8 +49,8 @@ int  DeQueue(Queue* queue);
 
 /* FCFS */
 int findMax(int n, int targetArr[]);
-void findWaitingTime(int processes[], int n, int bt[], int wt[], int at[]); 
-void findTurnAroundTime(int processes[], int n, int bt[], int wt[], int tat[]); 
+void findWaitingTime(int processes[], int n, int bt[], int wt[], int at[], int ct[]); 
+void findTurnAroundTime(int processes[], int n, int bt[], int wt[], int tat[], int ct[], int at[]); 
 void FCFS_findavgTime(int processes[], int n, int bt[], int at[]); 
 
 #endif /* LAB1_HEADER_H*/

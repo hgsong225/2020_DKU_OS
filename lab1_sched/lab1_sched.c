@@ -89,7 +89,7 @@ void RR(Task task[])
 	}
 }
 
-int pow(int n, int e) {
+int power(int n, int e) {
 	int value = 1;
 	for (int i = 0; i < e; i++) {
 		value *= n;
@@ -122,7 +122,7 @@ void FeedBack(Task task[])
 
 
 		for (int i = 0; i < FEEDBACK_QUEUE_SIZE; i++) {
-			int quota = pow(2, i + 1);
+			int quota = power(2, i + 1);
 
 			while (!IsEmptyQueue(&queue1[i])) {
 				int workIndex = DeQueue(&queue1[i]);
