@@ -67,7 +67,11 @@ int main(int argc, char* argv[]) {
 		{6, 5, 0, 10, 0, -1, -1, 0},
 	};
 
+	printf("Round Robin Scheduling>>>>>>>>>>>>>>>>>>>>>");
+	printf("\n");
 	RR(task);
+	printf("Feedback Scheduling>>>>>>>>>>>>>>>>>>>>>");
+	printf("\n");
 	FeedBack(task);
 
 	Task task2[TASK_NUM] = {
@@ -79,7 +83,11 @@ int main(int argc, char* argv[]) {
 		{6, 1, 0, 8, 10, -1, -1, 0},
 	};
 
+	printf("Round Robin 2 Scheduling>>>>>>>>>>>>>>>>>>>>>");
+	printf("\n");
 	RR(task2);
+	printf("Feedback 2 Scheduling>>>>>>>>>>>>>>>>>>>>>");
+	printf("\n");
 	FeedBack(task2);
 
 }
