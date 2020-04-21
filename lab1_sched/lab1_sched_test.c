@@ -12,7 +12,7 @@
 *
 */
 
-// #include <aio.h>
+#include <aio.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -25,8 +25,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <assert.h>
-// #include <pthread.h>
-// #include <asm/unistd.h>
+#include <pthread.h>
+#include <asm/unistd.h>
 
 #include "./include/lab1_sched_types.h"
 
@@ -68,10 +68,8 @@ int main(int argc, char* argv[]) {
 	};
 
 	RR(task);
-	HRRN(task);
 	FeedBack(task);
 
-	// Period 4, 6, 12 of T1, T2, T3 repeat
 	Task task2[TASK_NUM] = {
 		{1, 1, 0, 0, 10, -1, -1, 0},
 		{2, 2, 0, 0, 5, -1, -1, 0},
@@ -81,5 +79,7 @@ int main(int argc, char* argv[]) {
 		{6, 1, 0, 8, 10, -1, -1, 0},
 	};
 
-	RM(task2);
+	RR(task2);
+	FeedBack(task2);
+
 }
